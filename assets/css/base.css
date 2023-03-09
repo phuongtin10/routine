@@ -1,0 +1,72 @@
+:root{
+    --primary: #021A84;
+    --secondary: #fe4c4c;
+    --text: #171717;
+    --gray: #999999;
+    --light-gray: #e5e5e5;
+    --green-text: #2ADA66;
+    --blue-text: #021A84;
+    --red-text: #E5532A;
+    --blue-radient: linear-gradient(0deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), #021A84;
+    --green-radient: linear-gradient(0deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), #2ADA66;
+    --red-radient: linear-gradient(0deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), #E5532A;
+}
+html, body {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+}
+.wrapper{
+    max-width: 1160px;
+    width: 100%;
+    margin-inline: auto;
+}
+
+/* button */
+.btn{
+height: 44px;
+min-width: 149px;
+display: flex;
+justify-content: center;
+font-size: 18px;
+font-weight: 500;
+padding: 8px 6px;
+color: inherit;
+}
+.btn--border{
+    border: 1px solid #021A84;
+    border-radius: 8px;
+}
+.btn--border:hover{
+    color: white;
+    background-color: #021A84;
+}
+.btn--last{
+    background: #021A84;
+border-radius: 8px;
+color: white;
+user-select: none;
+cursor: pointer;
+position: relative;
+isolation: isolate;
+overflow: hidden;
+}
+
+
+.btn--last:hover::before {
+    left: auto;
+    right: 0;
+    width: 100%;
+  }
+  .btn--last::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: auto;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background-color: #fff;
+    opacity: 0.1;
+    z-index: -1;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
